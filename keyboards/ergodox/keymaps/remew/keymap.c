@@ -7,6 +7,8 @@
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
 
+#define _______ KC_TRNS
+
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
@@ -82,23 +84,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // SYMBOLS
 [SYMB] = KEYMAP(
        // left hand
-       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
-       KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
-       KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
-       KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
-          EPRM,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                                       RGB_MOD,KC_TRNS,
-                                               KC_TRNS,
-                               RGB_VAD,RGB_VAI,KC_TRNS,
+       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  _______,
+       _______,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,_______,
+       _______,KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
+       _______,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,_______,
+          EPRM,_______,_______,_______,_______,
+                                       RGB_MOD,_______,
+                                               _______,
+                               RGB_VAD,RGB_VAI,_______,
        // right hand
-       KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
-       KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_F12,
-                KC_DOWN, KC_4,   KC_5,    KC_6,    KC_PLUS, KC_TRNS,
-       KC_TRNS, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_BSLS, KC_TRNS,
-                         KC_TRNS,KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
+       _______, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
+       _______, KC_UP,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_F12,
+                KC_DOWN, KC_4,   KC_5,    KC_6,    KC_PLUS, _______,
+       _______, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_BSLS, _______,
+                         _______,KC_DOT,  KC_0,    KC_EQL,  _______,
        RGB_TOG, RGB_SLD,
-       KC_TRNS,
-       KC_TRNS, RGB_HUD, RGB_HUI
+       _______,
+       _______, RGB_HUD, RGB_HUI
 ),
 /* Keymap 2: Media and mouse keys
  *
@@ -123,23 +125,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 // MEDIA AND MOUSE
 [MDIA] = KEYMAP(
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN2,
-                                           KC_TRNS, KC_TRNS,
-                                                    KC_TRNS,
-                                  KC_TRNS, KC_TRNS, KC_TRNS,
+       _______, _______, _______, _______, _______, _______, _______,
+       _______, _______, _______, KC_MS_U, _______, _______, _______,
+       _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, _______,
+       _______, _______, _______, _______, _______, _______, _______,
+       _______, _______, _______, KC_BTN1, KC_BTN2,
+                                           _______, _______,
+                                                    _______,
+                                  _______, _______, _______,
     // right hand
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                 KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, KC_TRNS, KC_MPLY,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
-                          KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS,
-       KC_TRNS,
-       KC_TRNS, KC_BTN1, KC_BTN2
+       _______,  _______, _______, _______, _______, _______, _______,
+       _______,  _______, _______, _______, _______, _______, _______,
+                 KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______, KC_MPLY,
+       _______,  _______, _______, KC_MPRV, KC_MNXT, _______, _______,
+                          KC_VOLU, KC_VOLD, KC_MUTE, _______, _______,
+       _______, _______,
+       _______,
+       _______, KC_BTN1, KC_BTN2
 ),
 };
 
