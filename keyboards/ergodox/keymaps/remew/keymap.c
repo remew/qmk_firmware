@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                               ,--------|------|------|       |------+------+--------.
  *                               |        |      | Home |       | PgUp |      |        |
  *                               |L3/Space|Backsp|------|       |------| Tab  | Enter  |
- *                               |        |ace   | Del  |       | RAlt |      |        |
+ *                               |        |ace   | Del  |       | Ins  |      |        |
  *                               `----------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_RALT, KC_UP,KC_LBRC,KC_RBRC,          KC_FN1,
         KC_LALT,        KC_ESC,
         KC_PGUP,
-        KC_RALT,KC_TAB, KC_ENT
+        KC_INS,KC_TAB, KC_ENT
     ),
 /* Keymap 0+: Basic layer
  *
