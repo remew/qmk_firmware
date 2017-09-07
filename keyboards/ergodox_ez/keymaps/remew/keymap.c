@@ -17,6 +17,13 @@ enum custom_keycodes {
   RGB_SLD
 };
 
+// for Tap Dance
+enum {
+  TD_LANG = 0
+};
+
+uint16_t hold_timers[MATRIX_ROWS][MATRIX_COLS];
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
@@ -191,6 +198,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
     [1] = ACTION_LAYER_TAP_TOGGLE(SYMB)                // FN1 - Momentary Layer 1 (Symbols)
+};
+
+void type_code(uint8_t code)
+{
+    register_code(code);
+    unregister_code(code);
+}
+
+// Not Working
+void set_kana(void)
+{
+    type_code(KC_HENK);
+    type_code(KC_LANG1);
+}
+
+// Not Working
+void set_eisu(void)
+{
+    type_code(KC_MHEN);
+    type_code(KC_LANG2);
+}
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_LANG] = ACTION_TAP_DANCE_DOUBLE(KC_LALT, KC_RALT)
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
