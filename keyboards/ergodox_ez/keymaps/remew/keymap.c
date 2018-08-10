@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_RALT, KC_RGUI, _______, _______, _______,
         _______,  KC_ESC,
         _______,
-         KC_INS,  KC_TAB, KC_ENT
+         KC_INS,  TD(TD_LANG), KC_ENT
     ),
 /* Keymap 1: Symbol Layer
  *
@@ -180,7 +180,7 @@ void set_eisu(void)
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_LANG] = ACTION_TAP_DANCE_DOUBLE(KC_LALT, KC_RALT)
+    [TD_LANG] = ACTION_TAP_DANCE_DOUBLE(KC_LANG2, KC_LANG1)
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
